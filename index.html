@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset='UTF-8' />
+  <meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport' />
+  <meta content='IE=edge' http-equiv='X-UA-Compatible' />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+  <title>Untuk Jihan Tersayang</title>
+  <style>
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background-color: #ffe4e1;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #Content {
+      position: relative;
+      z-index: 1;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .sticker {
+      width: 120px;
+      margin: 10px;
+      height: auto;
+    }
+
+    #loveMessage {
+      margin-top: 20px;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #d63384;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .btn-love {
+      background-color: #d63384;
+      border: none;
+      color: white;
+      font-size: 1.1em;
+      padding: 12px 25px;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+
+    .btn-love:hover {
+      background-color: #c72a76;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <audio src="https://feeldreams.github.io/angelbabypart2.mp3" id="linkmp3"></audio> -->
+
+  <div id='Content' class="container">
+    <h1>Cuman mau bilang... ❤️</h1>
+
+    <div id="ftAwal">
+      <img src="https://feeldreams.github.io/pandaputih.gif" class="sticker" alt="Sticker">
+    </div>
+
+    <button class="btn btn-love mt-3" onclick="showLoveMessage()">Klik di sini ya, Jihan! ✨</button>
+    <p id="loveMessage"></p>
+  </div>
+
+  <script>
+    function showLoveMessage() {
+      // Sembunyikan tombol biar estetik
+      event.target.style.display = 'none';
+
+      // Jalankan musik
+      // const audio = document.getElementById("linkmp3");
+      // audio.play();
+
+      const messages = [
+        "Hai Jihan, si paling bisa bikin hari aku jadi lebih terang. ❤️",
+        "Cuma mau bilang, makasih ya udah jadi alasan aku buat senyum hari ini.",
+        "Jujur, kamu itu vibes-nya positif banget, gak ngerti lagi deh! ✨",
+        "Dunia emang kadang capek ya, tapi liat kamu gitu aja udah bikin tenang.",
+        "Aku suka banget cara kamu ketawa, beneran definisi healing buat aku.",
+        "Tetap jadi diri sendiri ya, kamu itu udah lebih dari cukup buat aku.",
+        "Pokoknya, jangan lupa buat happy hari ini, karena kamu berhak dapet semua hal baik di dunia ini.",
+        "You are absolutely amazing, Jihan! 😍💖"
+      ];
+
+      let index = 0;
+      const loveMessageElement = document.getElementById("loveMessage");
+      
+      const displayNextMessage = () => {
+        if (index < messages.length) {
+          loveMessageElement.innerText = messages[index];
+          index++;
+          // Waktu tunggu 3.5 detik per kalimat
+          setTimeout(displayNextMessage, 4000); 
+        }
+      };
+
+      displayNextMessage();
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
